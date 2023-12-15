@@ -1,0 +1,8 @@
+.boton {
+	width: 200px;
+	margin: 10px 0px;
+	padding: 10px;
+	background-color: #000;
+	color: #fff;
+	border: 1px solid #000;
+}
