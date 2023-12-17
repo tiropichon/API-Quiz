@@ -1,3 +1,9 @@
+:root{
+	--blanco: #ffffff;
+	--grisClaro: #DFE9F3;
+	--negro: #000;
+}
+
 html{
 	box-sizing: border-box;
 	background-color: #000;
@@ -50,8 +56,9 @@ main {
 }
 
 .contenedor {
-	width: min(60%,1200px);
-	margin: 2% 15% 2% 15%;
+	width: min(80%,1500px);
+	margin: 2% 0% 2% 10%;
+	background-image: linear-gradient(to top, var(--negro) 0%, var(--blanco) 200%);
 }
 
 .contenedor>h2{
@@ -63,7 +70,8 @@ main {
 	color: #f7be68;
 	width: 100%;
 	/*border-bottom: 1px solid #f7be68;*/
-	margin: 2% 10% 2% 10%;
+	margin: 2% 10% 2% 0%;
+	background-image: linear-gradient(to top, var(--negro) 0%, var(--blanco) 100%);
 }
 
 .contenedor>h3{
@@ -112,5 +120,5 @@ main {
 .bold {
 	font-weight: bold;
 	background-color: lightgreen;
-	color: white;
+	color: black;
 }
