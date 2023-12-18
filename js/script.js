@@ -1,18 +1,3 @@
-
-
-//fetch(url)
-  //.then(res => res.json())
-  //.then(json => console.log(json.results))
-  //.catch(error => console.error(error))
-
-	//for(let i=0; i<datos.results.length; i++){
-		//console.log(datos.results[i]);
-		//console.log('Pregunta: ' + datos.results[i].question + '\n' +
-		//'Respuesta correcta: '+ datos.results[i].correct_answer+'\n' +
-		//'Respuestas incorrectas: ' + datos.results[i].incorrect_answers + '\n'
-		//)
-	//}
-
 async function obtenerDatos(url){
 	const newDiv = document.createElement('div');
 	newDiv.classList.add('contenedor-preguntas');
@@ -20,12 +5,8 @@ async function obtenerDatos(url){
 
 	const resultado = await fetch(url);
 	const datos = await resultado.json();
-	for(let i=0; i<datos.results.length; i++){
-		console.log(datos.results[i].question + '\n' +
-								datos.results[i].correct_answer+ '\n');
-		datos.results[i].incorrect_answers.forEach(incorrect_answer => console.log(incorrect_answer + '\n'));
-		console.log('\n');
 
+	for(let i=0; i<datos.results.length; i++){
 		const newH3 = document.createElement("h3")
 		newH3.textContent = `Pregunta ${i+1}. ${datos.results[i].question}`;
 		document.querySelector(".contenedor-preguntas").appendChild(newH3);
@@ -51,6 +32,7 @@ async function obtenerDatos(url){
 	}
 }
 
+//Función que se llama cuando hago click al botón del formulario.
 function generarFormulario(){
 	const url="https://opentdb.com/api.php?amount=10";
 	obtenerDatos(url);

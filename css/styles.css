@@ -57,9 +57,10 @@ main {
 
 .contenedor {
 	width: min(80%,1500px);
-	margin: 2% 0% 2% 10%;
-	background-image: linear-gradient(to top, var(--negro) 0%, var(--blanco) 200%);
+	margin: 2% 0% 0% 10%;
+	background-image: linear-gradient(to top, black 0%, grey 200%);
 	box-shadow: 0 2px 4px rgba(247, 190, 104, 0.8), 0 4px 12px rgba(247, 190, 104, 0.8);
+	padding: 0 0 2% 0;
 }
 
 .contenedor>h2{
@@ -93,36 +94,42 @@ main {
 
 .contenedor-preguntas{
 	width: min(115%,1200px);
-	margin: 2% 5% 2% 5%;
+	margin: 2% 5% 0 5%;
 	display: block;
+	border: 1px solid #f7be68;
+	border-radius: .5em;
 }
 
 .contenedor-preguntas h3{
-	width: 100%;
+	width: 95%;
 	display: block;
-	border-top: 1px solid #f7be68;
+	border: 1px solid #f7be68;
+	border-radius: .2em;
+	margin: 2rem;
+	background-color: rebeccapurple;
 }
 
-.contenedor-preguntas>h3:first-child{
+/*.contenedor-preguntas>h3:first-child{
 	border: 0;
-}
+}*/
 
 .contenedor-preguntas p {
 	display: block;
 	font-size: 18px;
 	line-height: 1.4;
+	margin: 2rem;
 }
 
 .boton {
-	width: 100%;
 	margin: 10px 0px;
 	padding: 10px;
 	background-color: #7c1e06;
 	color: #fff;
 	border: 1px solid #f7be68;
+	border-radius: .5em;
 	display: inline-block;
-	width: min(60%,1200px);
-	margin: 2% 18% 2% 21%;
+	width: min(25%,1200px);
+	margin: 2% 18% 2% 37%;
 }
 
 .bold {
