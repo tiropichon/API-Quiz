@@ -12,6 +12,7 @@
 		//'Respuestas incorrectas: ' + datos.results[i].incorrect_answers + '\n'
 		//)
 	//}
+
 async function obtenerDatos(url){
 	const newDiv = document.createElement('div');
 	newDiv.classList.add('contenedor-preguntas');
@@ -29,14 +30,22 @@ async function obtenerDatos(url){
 		newH3.textContent = `Pregunta ${i+1}. ${datos.results[i].question}`;
 		document.querySelector(".contenedor-preguntas").appendChild(newH3);
 		
-		const newP = document.createElement("p");
-		newP.classList.add('bold');
-		newP.textContent = datos.results[i].correct_answer;
-		document.querySelector(".contenedor-preguntas").appendChild(newP);
+		const newPCorrect = document.createElement("p");
+		newPCorrect.classList.add('bold');
+		newPCorrect.textContent = datos.results[i].correct_answer;
+		newPCorrect.addEventListener("click",function(){
+			newPCorrect.style.background = "lightgreen";
+			newPCorrect.style.color = "black";
+		})
+		document.querySelector(".contenedor-preguntas").appendChild(newPCorrect);
 
 		datos.results[i].incorrect_answers.forEach( incorrect_answer=> {
 			const newP = document.createElement("p");
-			newP.textContent = incorrect_answer; 
+			newP.textContent = incorrect_answer;
+			newP.addEventListener("click",function(){
+				newP.style.background = "red";
+				newP.style.color = "black";
+			})
 			document.querySelector(".contenedor-preguntas").appendChild(newP);}
 		);
 	}

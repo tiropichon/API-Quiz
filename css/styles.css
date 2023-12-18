@@ -59,6 +59,7 @@ main {
 	width: min(80%,1500px);
 	margin: 2% 0% 2% 10%;
 	background-image: linear-gradient(to top, var(--negro) 0%, var(--blanco) 200%);
+	box-shadow: 0 2px 4px rgba(247, 190, 104, 0.8), 0 4px 12px rgba(247, 190, 104, 0.8);
 }
 
 .contenedor>h2{
@@ -93,6 +94,7 @@ main {
 .contenedor-preguntas{
 	width: min(115%,1200px);
 	margin: 2% 5% 2% 5%;
+	display: block;
 }
 
 .contenedor-preguntas h3{
@@ -101,8 +103,14 @@ main {
 	border-top: 1px solid #f7be68;
 }
 
+.contenedor-preguntas>h3:first-child{
+	border: 0;
+}
+
 .contenedor-preguntas p {
 	display: block;
+	font-size: 18px;
+	line-height: 1.4;
 }
 
 .boton {
@@ -119,6 +127,6 @@ main {
 
 .bold {
 	font-weight: bold;
-	background-color: lightgreen;
-	color: black;
+	/*background-color: lightgreen;
+	color: black;*/
 }
