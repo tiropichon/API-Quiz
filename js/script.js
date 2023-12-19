@@ -40,6 +40,7 @@ function crearRespuestasIncorrectas(respuestasIncorrectas){
 async function obtenerDatos(url){
 	const resultado = await fetch(url);
 	const datos = await resultado.json();
+	console.log(datos.results);
 
 	for(let i=0; i<datos.results.length; i++){
 		crearPregunta(i, datos.results[i].question);
